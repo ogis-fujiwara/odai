@@ -1,11 +1,11 @@
 #include <iostream>
-#include "./list.cpp"
+#include "./list.hpp"
 
 using namespace std;
 
 template <typename T>
 void outputList(List<T>* l) {
-    for (auto it = l->getIterator(); it != l->end ; it.next()) {
+    for (auto it = l->begin(); it != l->end() ; it.next()) {
         cout << it.get() << "->";
     }
     cout << endl;
@@ -24,7 +24,7 @@ int main() {
 
     outputList(&list);
         
-    for (auto it = list.getIterator(); it != list.end ; it.next()) {
+    for (auto it = list.begin(); it != list.end() ; it.next()) {
         if (it.get() == 5) {
             // イテレータを用いて、任意の要素を削除
             // ここでは、5の直後
