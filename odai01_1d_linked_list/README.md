@@ -1,5 +1,5 @@
 # お題内容
-test tuika
+
 単方向 linked list コンテナの作成。
 
 できる操作は、以下とする。
